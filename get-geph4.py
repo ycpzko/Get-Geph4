@@ -22,12 +22,12 @@ if os.path.exists(localFile):
         print("Already the latest version")
         localVer.close()
         delfile()
-else:
+    else:
     # Write geph4Version
-    f=open(localFile,'w')
-    f.write(geph4Version)
-    f.close()
-    delfile()
-    # Git commit
-    os.system("git add -A && git commit -am 'update to %s'" %geph4Version)
-    os.system("git tag v%s && git push && git push origin --tags" %geph4Version)
+        f=open(localFile,'w')
+        f.write(geph4Version)
+        f.close()
+        delfile()
+        # Git commit
+        os.system("git add -A && git commit -am 'update to %s'" %geph4Version)
+        os.system("git tag v%s && git push && git push origin --tags" %geph4Version)
