@@ -1,8 +1,8 @@
 name: Rust
 
 on:
-watch:
-    types: [started]
+  watch:
+     types: [started]
 
 env:
   CARGO_TERM_COLOR: always
