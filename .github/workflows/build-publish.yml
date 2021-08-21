@@ -16,8 +16,8 @@ jobs:
     - name: Build
       run: sh build.sh
     - name: Release
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
+      uses: actions/upload-artifact@main
+      if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         files: geph4/OUTPUT/*
       env:
