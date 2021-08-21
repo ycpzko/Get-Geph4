@@ -1,9 +1,8 @@
 name: Rust
 
 on:
-  push:
-    tags:
-      - 'v*'
+watch:
+    types: [started]
 
 env:
   CARGO_TERM_COLOR: always
