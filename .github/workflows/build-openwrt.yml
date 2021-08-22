@@ -56,7 +56,6 @@ jobs:
       run: |
         cd geph4
       cross build --release --locked --target i686-pc-windows-gnu --manifest-path=geph4-client/Cargo.toml
-      cross build --release --locked --target x86_64-unknown-linux-musl --manifest-path=geph4-client/Cargo.toml
       cross build --release --locked --target x86_64-unknown-linux-gnu --manifest-path=geph4-vpn-helper/Cargo.toml
       cross build --release --locked --target armv7-linux-androideabi --manifest-path=geph4-client/Cargo.toml
       cross build --release --locked --target aarch64-linux-android --manifest-path=geph4-client/Cargo.toml
