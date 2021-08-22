@@ -15,10 +15,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: sh build.sh
-    - name: Release
+   - name: Upload bin directory
       uses: actions/upload-artifact@main
-      if: steps.organize.outputs.status == 'success' && !cancelled()
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        files: geph4/OUTPUT/*
+        path: geph4/OUTPUT
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
