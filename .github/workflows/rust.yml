@@ -18,6 +18,6 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        path: geph4/OUTPUT
+        path: ~/geph4/OUTPUT/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
